@@ -68,36 +68,3 @@ Contributions to this project are welcome. Please follow the standard fork and p
 
 This project is licensed under the [MIT License](LICENSE). See the LICENSE file for more details.
 ```
-
-<!-- Monolith
-# Test Addition
-curl -X POST http://localhost:81/add -H "Content-Type: application/json" -d '{"a": 10, "b": 5}'
-
-# Test Subtraction
-curl -X POST http://localhost:81/subtract -H "Content-Type: application/json" -d '{"a": 10, "b": 3}'
-
-# Test Multiplication
-curl -X POST http://localhost:81/multiply -H "Content-Type: application/json" -d '{"a": 4, "b": 5}'
-
-# Test Division
-curl -X POST http://localhost:81/divide -H "Content-Type: application/json" -d '{"a": 20, "b": 4}'
-
-# Test Division by Zero (Should handle error)
-curl -X POST http://localhost:81/divide -H "Content-Type: application/json" -d '{"a": 20, "b": 0}'
-
-
-
-# Addition
-curl -X POST http://localhost/add -H "Content-Type: application/json" -d '{"a": 10, "b": 5}'
-
-# Subtraction
-curl -X POST http://localhost/subtract -H "Content-Type: application/json" -d '{"a": 10, "b": 3}'
-
-# Multiplication
-curl -X POST http://localhost/multiply -H "Content-Type: application/json" -d '{"a": 4, "b": 5}'
-
-# Division
-curl -X POST http://localhost/divide -H "Content-Type: application/json" -d '{"a": 20, "b": 4}'
-
-
--->
