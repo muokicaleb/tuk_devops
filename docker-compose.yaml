@@ -24,7 +24,7 @@ services:
   nginx:
     image: nginx:latest
     ports:
-      - "81:80"
+      - "80:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
@@ -32,3 +32,8 @@ services:
       - subtraction_service
       - multiplication_service
       - division_service
+
+  monolith_app:
+    build: ./monolith
+    ports:
+      - "81:8000"

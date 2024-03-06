@@ -60,10 +60,6 @@ You can test the functionality of each microservice through the NGINX server usi
   curl -X POST http://localhost/divide -H "Content-Type: application/json" -d '{"a": 20, "b": 4}'
   ```
 
-## Architecture
-
-This section should describe the architecture of your microservices project, including how each microservice is isolated yet communicates through the NGINX reverse proxy.
-
 ## Contributing
 
 Contributions to this project are welcome. Please follow the standard fork and pull request workflow. Ensure you write or update tests as necessary for any code changes.
@@ -72,3 +68,36 @@ Contributions to this project are welcome. Please follow the standard fork and p
 
 This project is licensed under the [MIT License](LICENSE). See the LICENSE file for more details.
 ```
+
+<!--- Monolith
+# Test Addition
+curl -X POST http://localhost:81/add -H "Content-Type: application/json" -d '{"a": 10, "b": 5}'
+
+# Test Subtraction
+curl -X POST http://localhost:81/subtract -H "Content-Type: application/json" -d '{"a": 10, "b": 3}'
+
+# Test Multiplication
+curl -X POST http://localhost:81/multiply -H "Content-Type: application/json" -d '{"a": 4, "b": 5}'
+
+# Test Division
+curl -X POST http://localhost:81/divide -H "Content-Type: application/json" -d '{"a": 20, "b": 4}'
+
+# Test Division by Zero (Should handle error)
+curl -X POST http://localhost:81/divide -H "Content-Type: application/json" -d '{"a": 20, "b": 0}'
+
+
+
+# Addition
+curl -X POST http://localhost/add -H "Content-Type: application/json" -d '{"a": 10, "b": 5}'
+
+# Subtraction
+curl -X POST http://localhost/subtract -H "Content-Type: application/json" -d '{"a": 10, "b": 3}'
+
+# Multiplication
+curl -X POST http://localhost/multiply -H "Content-Type: application/json" -d '{"a": 4, "b": 5}'
+
+# Division
+curl -X POST http://localhost/divide -H "Content-Type: application/json" -d '{"a": 20, "b": 4}'
+
+
+-->
