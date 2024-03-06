@@ -69,7 +69,7 @@ Contributions to this project are welcome. Please follow the standard fork and p
 This project is licensed under the [MIT License](LICENSE). See the LICENSE file for more details.
 ```
 
-<!--- Monolith
+<!-- Monolith
 # Test Addition
 curl -X POST http://localhost:81/add -H "Content-Type: application/json" -d '{"a": 10, "b": 5}'
 
