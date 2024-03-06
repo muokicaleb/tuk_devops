@@ -1,6 +1,3 @@
-To convert the previous explanation into a structured Markdown format suitable for a README file, you can follow the template provided below. This version will be ready to use as a README.md file for your project, assuming you replace placeholder text like `<repository-url>` with actual information relevant to your project.
-
-```markdown
 # Microservices Calculator Project
 
 ## Overview
@@ -67,4 +64,4 @@ Contributions to this project are welcome. Please follow the standard fork and p
 ## License
 
 This project is licensed under the [MIT License](LICENSE). See the LICENSE file for more details.
-```
+
