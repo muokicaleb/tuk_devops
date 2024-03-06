@@ -2,21 +2,25 @@ version: '3.8'
 
 services:
   addition_service:
+    image: muoki/tukdevops:addition_service
     build: ./addition_service
     ports:
       - "8001:8000"
 
   subtraction_service:
+    image: muoki/tukdevops:subtraction_service
     build: ./subtraction_service
     ports:
       - "8002:8000"
 
   multiplication_service:
+    image: muoki/tukdevops:multiplication_service
     build: ./multiplication_service
     ports:
       - "8003:8000"
 
   division_service:
+    image: muoki/tukdevops:division_service
     build: ./division_service
     ports:
       - "8004:8000"

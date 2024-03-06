@@ -55,10 +55,4 @@
           - containerd.io
         state: present
       become: yes
-    - name: pull nginx image
-      shell: docker run --rm -d --name azademo -p 80:80 nginx
-      become: yes
 
-    - name: pull azademo image
-      shell: docker run --rm -d --name azademo -p 5000:5000 muoki/azademo:main
-      become: yes
