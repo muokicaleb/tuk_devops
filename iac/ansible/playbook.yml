@@ -1,0 +1,58 @@
+---
+- name: Tuk DevOps
+  hosts: 'all'
+
+  tasks:
+    - name: uninstall older versions of docker
+      apt:
+        pkg:
+          - docker
+          - docker-engine
+          - docker.io
+          - containerd
+          - runc
+        state: absent
+      become: yes
+
+    - name: apt update
+      apt:
+        update_cache: yes
+      become: yes
+
+    - name: install packages to allow to use repository over https
+      apt:
+        pkg:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - gnupg
+          - lsb-release
+        state: present
+      become: yes
+
+    - name: add Docker's official gpg key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+      become: yes
+
+    - name: Add Docker Repository
+      apt_repository:
+        repo: deb https://download.docker.com/linux/ubuntu bionic stable
+        state: present
+      become: yes
+
+    - name: apt update
+      apt:
+        update_cache: yes
+      become: yes
+
+    - name: install docker
+      apt:
+        pkg:
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+        state: present
+      become: yes
+
